@@ -1,0 +1,11 @@
+.vscode
+.env.local
+
+tmp/*
+!tmp/.gitkeep
+
+*.exe
+*.zip
+*.tar
+
+go.sum
