@@ -35,3 +35,6 @@ func main() {
 		log.Fatal(err)
 	}
 }
+
+// rsrc -arch amd64 -manifest gcli.manifest -ico gcli.ico -o gcli.syso
+// go build

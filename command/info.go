@@ -9,12 +9,20 @@ import (
 
 // CONFIG_RELATIVE_PATH 配置文件路径（相对于安装路径） 暂时简单用string写死
 const CONFIG_RELATIVE_PATH = `\Genshin Impact Game\config.ini`
+const LAUNCHER_RELATIVE_PATH = `\launcher.exe`
 
 // GetGenshiConfigPath 获取原神配置文件路径
 func GetGenshiConfigPath() (string, string) {
 	installPath := util.GetGenshinInstallPathByReg()
 	configPath := installPath + CONFIG_RELATIVE_PATH
 	return installPath, configPath
+}
+
+// GetGenshiLauncherPath 获取原神启动器路径
+func GetGenshiLauncherPath() string {
+	installPath := util.GetGenshinInstallPathByReg()
+	launcherPath := installPath + LAUNCHER_RELATIVE_PATH
+	return launcherPath
 }
 
 // NewInfo 实例化info命令

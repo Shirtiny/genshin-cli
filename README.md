@@ -19,3 +19,24 @@ gcli info
 ```shell
 gcli server
 ```
+
+切换并启动指定服务器
+
+```shell
+# 切换到b服
+gcli server use b
+#切换到官服
+gcli server use m
+```
+
+查看支持的服务器列表和当前服务器
+
+```shell
+gcli server ls
+```
+
+帮助
+
+```shell
+gcli -h
+```

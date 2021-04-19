@@ -7,5 +7,6 @@ tmp/*
 *.exe
 *.zip
 *.tar
+*.syso
 
 go.sum
