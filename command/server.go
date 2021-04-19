@@ -57,6 +57,13 @@ func SwitchServer(server *Server) {
 	// 获取配置文件路径
 	_, configPath := GetGenshiConfigPath()
 
+	currentServer := GetServer(util.GetGenshinServerFromConfig(configPath).Cps)
+
+	if strings.Compare(server.Name, currentServer.Name) == 0 {
+		fmt.Println("检测到当前已经是目标服务器，不再切换")
+		return
+	}
+
 	// 覆写配置文件
 	util.SetGenshinServerConfig(configPath, server.Cps, server.Channel, server.SubChannel)
 	fmt.Printf("已经切换至：%+v\n", server)
