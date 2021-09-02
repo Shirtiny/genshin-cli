@@ -40,3 +40,5 @@ gcli server ls
 ```shell
 gcli -h
 ```
+
+原神2.1 B服需要将[PCGameSDK.dll](https://github.com/Shirtiny/genshin-cli/blob/main/PCGameSDK.dll)拷贝至`Genshin Impact Game`文件夹下才可切换
